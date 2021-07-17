@@ -16,7 +16,7 @@ cli = typer.Typer()  # this is actually callable and thus can be an entry point
 def main(x: int = typer.Option(default=1, help="Dummy argument.")) -> Optional[int]:
     """Command line interface for cliroy."""
 
-    typer.echo(x)  # typer.echo instead of print, because it's better
+    typer.echo(x)
 
 
 if __name__ == '__main__':
