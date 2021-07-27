@@ -5,7 +5,7 @@ $ cliroy
 1
 ```
 
-That's it. It just prints ```x``` argument.
+That's it. It just prints `x` argument.
 
 ## Full usage
 
