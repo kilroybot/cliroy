@@ -2,14 +2,15 @@
 
 <div align="center">
 
-[![Running tests](https://github.com/kilroybot/cliroy/actions/workflows/test.yml/badge.svg)](https://github.com/kilroybot/cliroy/actions/workflows/test.yml)
-[![Deploying docs](https://github.com/kilroybot/cliroy/actions/workflows/docs.yml/badge.svg)](https://github.com/kilroybot/cliroy/actions/workflows/docs.yml)
+kilroy cli 💻
+
+[![Multiplatform tests](https://github.com/kilroybot/cliroy/actions/workflows/test-multiplatform.yml/badge.svg)](https://github.com/kilroybot/cliroy/actions/workflows/test-multiplatform.yml)
+[![Docker tests](https://github.com/kilroybot/cliroy/actions/workflows/test-docker.yml/badge.svg)](https://github.com/kilroybot/cliroy/actions/workflows/test-docker.yml)
+[![Docs](https://github.com/kilroybot/cliroy/actions/workflows/docs.yml/badge.svg)](https://github.com/kilroybot/cliroy/actions/workflows/docs.yml)
 
 </div>
 
 ---
-
-kilroy cli 💻
 
 TODO
 
@@ -19,11 +20,4 @@ Using `pip`:
 
 ```sh
 pip install cliroy
-```
-
-## Usage
-
-```sh
-$ cliroy
-1
 ```
