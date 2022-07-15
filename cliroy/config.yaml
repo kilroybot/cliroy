@@ -1,0 +1,54 @@
+models:
+  gpt:
+    type: distribution
+    source: huggingface
+    path: gpt2
+
+codecs:
+  gpt:
+    type: huggingface
+    path: gpt2
+
+face:
+  type: discord
+  channel_id: 912476283748
+  auth:
+    token: ${DISCORD_TOKEN:-FHJKHYUDCVBJAAHGEBNMAXL}
+  scorer: reactions
+  scraper: channel
+
+offline:
+  trainer:
+    stop_condition:
+      type: max_epochs
+      epochs: 1
+    posts_loader:
+      batch_size: 1
+      dataset_factory: memory
+  module:
+    type: basic
+    model: gpt
+    codec: gpt
+    optimizer:
+      type: adam
+      lr: 0.05
+
+online:
+  trainer:
+    stop_condition:
+      type: max_episodes
+      episodes: 1
+    generator:
+      n: 1
+    scheduler:
+      cooldown:
+        seconds: 1
+  module:
+    type: basic
+    model: gpt
+    codec: gpt
+    generator:
+      max_length: 10
+    optimizer:
+      type: adam
+      lr: 0.05
